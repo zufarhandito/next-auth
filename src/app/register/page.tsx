@@ -1,6 +1,5 @@
 "use client"
 import React from 'react'
-import Link from 'next/link';
 
 export default function page() {
 
@@ -16,25 +15,23 @@ const handleLogin = () => {
       <div className='lg:w-1/3 lg:p-20 p-14 h-screen flex justify-center'>
         <div className='h-fit my-auto'>
           <div className=' text-center'>
-          <p className='text-4xl font-black'>login.</p>
-          <p className='my-2'>To access our contents, please login by email address and password</p>
+          <p className='text-4xl font-black'>Register.</p>
+          <p className='my-2'>Hello! Please register yourself by email address and password</p>
         </div>
         <div className='my-8 '>
-          <form method='post' action='/dashboard' onSubmit={handleLogin}>
+          <form method='post' action='/login' onSubmit={handleLogin}>
             <input id='Email' className='p-3 w-full bg-slate-100 rounded my-2' type="email" placeholder='Email'/>
             <input id='Password' className='p-3 w-full bg-slate-100 rounded my-2' type="password" placeholder='Password'/>
+            <input id='confPassword' className='p-3 w-full bg-slate-100 rounded my-2' type="password" placeholder='Confirm Password'/>
             <div className='flex justify-between mt-2 mb-10 text-sm font-normal'>
               <div>
                 <input type="checkbox" name="rememberMe" id="rememberMe" />
                 <label className='ml-2' htmlFor="rememberMe">Remember me?</label>
               </div>
-              <div>
-                <a href="">Forget password?</a>
-              </div>
             </div>
-            <input type="submit" value="Login" className='bg-blue-600 text-white py-2 text-center w-full my-4 shadow-lg rounded hover:cursor-pointer transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300' />
+            <input type="submit" value="Create account" className='bg-blue-600 text-white py-2 text-center w-full my-4 shadow-lg rounded hover:cursor-pointer transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300' />
             <div className='flex w-full justify-center  '>
-              <p className='text-sm'>Dont have account? <Link href="/register" className='text-blue-500 font-bold'>Register</Link> </p>
+              <p className='text-sm'>Already have an account? <a href="" className='text-blue-500 font-bold'>Login</a> </p>
             </div>
           </form>
         </div>
