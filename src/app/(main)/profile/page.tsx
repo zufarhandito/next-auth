@@ -2,8 +2,6 @@ import React from 'react'
 
 export default function page() {
   return (
-    <div>
-      page dashboard
-    </div>
+    <div>halaman profile</div>
   )
 }
